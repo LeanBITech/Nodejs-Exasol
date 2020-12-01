@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-exasol",
+  "version": "0.1.0",
+  "description": "WebSocket based connector to Exasol for Nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeanBITech/Nodejs-Exasol.git"
+  },
+  "author": "Christian Faaberg Lensbjerg @ Lean BI Tech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeanBITech/Nodejs-Exasol/issues"
+  },
+  "homepage": "https://github.com/LeanBITech/Nodejs-Exasol#readme",
+  "dependencies": {
+    "jsbn": "^1.1.0",
+    "ws": "^7.4.0"
+  }
+}
