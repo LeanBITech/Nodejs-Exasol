@@ -58,10 +58,14 @@ class Client {
                 0,
                 resultSet.numRows,
                 (result) => {
-                  cb(null, this.resultToJSON(result));
+                  if(result.data) cb(null, this.resultToJSON(result));
+                  else cb(null, null);
                 }
               );
-            } else cb(null, this.resultToJSON(resultSet));
+            } else{
+              if(resultSet.data) cb(null, this.resultToJSON(resultSet));
+              else cb(null, null);
+            } 
           } // Non-query statement
           else {
             cb(null, null);
