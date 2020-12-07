@@ -442,7 +442,6 @@ module.exports = {
           context.connection.onmessage = function (rd) {
             console.log("Unexpected message: " + rd);
           };
-          console.log("Got response: " + repdata.data);
           rep = json_parse(repdata.data);
           if (rep["status"] == "ok") {
             if (rep["exception"] != undefined)
@@ -471,7 +470,9 @@ module.exports = {
         throw "Connection already in work";
       }
 
-      console.log("Send request: " + reqdata);
+      if (debug) {
+        console.log("Send request: " + reqdata);
+      }
       context.inwork = true;
       context.connection.send(reqdata);
     };
